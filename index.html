@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌤️ Clima Local</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app" class="day">
+        <!-- Animaciones del clima -->
+        <div id="weather-animation"></div>
+        
+        <div class="container">
+            <!-- Reloj -->
+            <div class="clock">
+                <span id="hours">00</span>
+                <span class="separator">:</span>
+                <span id="minutes">00</span>
+                <span class="separator">:</span>
+                <span id="seconds" class="seconds">00</span>
+            </div>
+            <p id="date" class="date"></p>
+
+            <!-- Loading -->
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Obteniendo tu clima local...</p>
+            </div>
+
+            <!-- Error -->
+            <div id="error" class="error" style="display: none;">
+                <p>⚠️ <span id="error-message"></span></p>
+            </div>
+
+            <!-- Clima -->
+            <div id="weather" class="weather" style="display: none;">
+                <p class="location">📍 <span id="city"></span></p>
+                
+                <div class="current-weather">
+                    <span id="weather-icon" class="weather-icon">☀️</span>
+                    <div class="temp-info">
+                        <p class="temperature"><span id="temp"></span>°C</p>
+                        <p id="description" class="description"></p>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="detail">
+                        <span>💧</span>
+                        <span>Humedad: <span id="humidity"></span>%</span>
+                    </div>
+                    <div class="detail">
+                        <span>💨</span>
+                        <span>Viento: <span id="wind"></span> km/h</span>
+                    </div>
+                </div>
+
+                <!-- Pronóstico -->
+                <div class="forecast">
+                    <h2>Próximas horas</h2>
+                    <div id="forecast-container" class="forecast-container"></div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                Hecho con ❤️ en VibeCoding Bootcamp - Frutero Club
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
